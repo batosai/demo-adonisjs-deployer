@@ -1,0 +1,25 @@
+name: Deploy
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - run: npm ci
+
+      - uses: catapultjs/deploy-action@v1
+        env:
+          DEPLOY_SSH: ${{ secrets.DEPLOY_SSH }}
+          DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
+        with:
+          private-key: ${{ secrets.DEPLOY_SSH_PRIVATE_KEY }}
+          args: |
+            -vvv
