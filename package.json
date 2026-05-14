@@ -74,5 +74,8 @@
   "bundleDependencies": [
     "@adonisjs/core",
     "reflect-metadata"
-  ]
+  ],
+  "volta": {
+    "node": "24.13.0"
+  }
 }
