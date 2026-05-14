@@ -12,8 +12,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 24
+          cache: npm
 
-      - uses: catapultjs/deploy-action@v0.4.0
+      - uses: catapultjs/deploy-action@v0.5.0
         env:
           DEPLOY_SSH: ${{ secrets.DEPLOY_SSH }}
           DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
