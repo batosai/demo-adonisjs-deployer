@@ -21,5 +21,6 @@ jobs:
           DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
         with:
           private-key: ${{ secrets.DEPLOY_SSH_PRIVATE_KEY }}
+          insecure-ignore-host-key: true
           args: |
             -vvv
