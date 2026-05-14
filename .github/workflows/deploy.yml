@@ -20,7 +20,6 @@ jobs:
           DEPLOY_SSH: ${{ secrets.DEPLOY_SSH }}
           DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
         with:
-          version: 0.6.2-alpha.1
           private-key: ${{ secrets.DEPLOY_SSH_PRIVATE_KEY }}
           insecure-ignore-host-key: true
           args: |
