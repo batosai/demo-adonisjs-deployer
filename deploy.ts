@@ -1,7 +1,7 @@
 import { defineConfig, remove } from '@catapultjs/deploy'
 import '@catapultjs/deploy/recipes/adonisjs'
 import '@catapultjs/deploy/recipes/git'
-import '@catapultjs/deploy/recipes/pm2'
+// import '@catapultjs/deploy/recipes/pm2'
 
 remove('ace:migration:run')
 
