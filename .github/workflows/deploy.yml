@@ -15,7 +15,7 @@ jobs:
 
       - run: npm ci
 
-      - uses: catapultjs/deploy-action@v1
+      - uses: catapultjs/deploy-action@v0.2.0
         env:
           DEPLOY_SSH: ${{ secrets.DEPLOY_SSH }}
           DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
