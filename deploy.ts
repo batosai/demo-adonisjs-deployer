@@ -1,5 +1,4 @@
 import { defineConfig, remove } from '@catapultjs/deploy'
-import { Verbose } from '@catapultjs/deploy/enums'
 import '@catapultjs/deploy/recipes/adonisjs'
 import '@catapultjs/deploy/recipes/git'
 import '@catapultjs/deploy/recipes/pm2'
@@ -13,7 +12,7 @@ if (!ssh) throw new Error('Missing DEPLOY_SSH')
 if (!deployPath) throw new Error('Missing DEPLOY_PATH')
 
 export default defineConfig({
-  verbose: Verbose.TRACE,
+  keepReleases: 2,
   hosts: [
     {
       name: 'production',
